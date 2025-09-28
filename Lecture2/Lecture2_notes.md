@@ -26,3 +26,17 @@ Any Square matrix A can be represented as
 
 ### A = U x P x U<sup>-1</sup>
 - P is the Eigen value matrix of A
+
+## there are 2 problem 
+- Inverse of all matrix can not always exist
+- Not all matrix will always be square 
+
+<span style="color:red">_Singular Value decomposition_ </span>
+### A = U x S x V<sup>T</sup>
+- S is the singular value of matrix
+
+1. Find A x A<sup>T</sup>
+2. Find Eigne **vector** of A x A<sup>T</sup> **_This is U_** 
+3. Find A<sup>T</sup> x A
+4. Find Eigen **vector** of A<sup>T</sup> x A **_This is V_**
+5. Find Eigen **value** of A x A<sup>T</sup> **_This is S_** 
