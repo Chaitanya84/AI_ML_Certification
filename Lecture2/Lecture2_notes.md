@@ -2,7 +2,7 @@
 #### Simple objective principle component analysis
 - Eigne values 
 - Eigne vector
-~ Google uses eigne valuesin page rank algorithm ~
+~ Google uses eigne values in page rank algorithm ~
 
 ### The key Idea
 
@@ -22,21 +22,74 @@ Principle component is the vector of 1000 pixel data in the above image.
 -------------------------------
 Concept :
 
-Any Square matrix A can be represented as 
+ Matrix Similarity: \( A = U P U^{-1} \)
 
-### A = U x P x U<sup>-1</sup>
-- P is the Eigen value matrix of A
+#### Question 1: What do A, U, and P represent in the equation \( A = U P U^{-1} \)?
 
-## there are 2 problem 
-- Inverse of all matrix can not always exist
-- Not all matrix will always be square 
+This equation represents a **similarity transformation** of a matrix. It expresses a square matrix \( A \) as being similar to a (usually simpler) matrix \( P \), via a change of basis matrix \( U \).
 
-<span style="color:red">_Singular Value decomposition_ </span>
-### A = U x S x V<sup>T</sup>
-- S is the singular value of matrix
+### Definitions:
 
-1. Find A x A<sup>T</sup>
-2. Find Eigne **vector** of A x A<sup>T</sup> **_This is U_** 
-3. Find A<sup>T</sup> x A
-4. Find Eigen **vector** of A<sup>T</sup> x A **_This is V_**
-5. Find Eigen **value** of A x A<sup>T</sup> **_This is S_** 
+- **\( A \)**: The original square matrix (\( n \times n \)) we want to analyze.
+- **\( U \)**: An invertible matrix whose columns are the (generalized) eigenvectors of \( A \).
+- **\( P \)**: A simpler matrix similar to \( A \), usually in:
+  - **Diagonal form** (if \( A \) is diagonalizable), or
+  - **Jordan form** (if \( A \) is not diagonalizable).
+
+### Scenarios:
+
+#### 1. Diagonalizable Case:
+If \( A \) has \( n \) linearly independent eigenvectors, then:
+
+\[
+A = U D U^{-1}
+\]
+
+- \( D \) is a diagonal matrix with eigenvalues of \( A \) on its diagonal.
+- \( U \) contains the corresponding eigenvectors.
+
+#### 2. Non-Diagonalizable Case (Jordan Form):
+If \( A \) does **not** have enough independent eigenvectors, we use:
+
+\[
+A = U J U^{-1}
+\]
+
+- \( J \) is the **Jordan matrix**, which is almost diagonal but includes \( 1 \)'s just above the diagonal in some blocks.
+
+---
+
+#### Question 2: Sample R Code to Demonstrate \( A = U D U^{-1} \)
+
+Below is an R example that performs eigen decomposition of a diagonalizable matrix:
+
+```r
+# Define a simple 2x2 matrix A
+A <- matrix(c(4, 1,
+              2, 3), nrow = 2, byrow = TRUE)
+
+# Eigen decomposition
+eig <- eigen(A)
+
+# U is the matrix of eigenvectors
+U <- eig$vectors
+
+# D is the diagonal matrix of eigenvalues
+D <- diag(eig$values)
+
+# Reconstruct A: A = U * D * U^-1
+A_reconstructed <- U %*% D %*% solve(U)
+
+# Print original and reconstructed A
+cat("Original A:\n")
+print(A)
+
+cat("\nReconstructed A (from eigen decomposition):\n")
+print(A_reconstructed)
+
+# Check if they are (approximately) equal
+cat("\nDifference (A - A_reconstructed):\n")
+print(A - A_reconstructed)
+```
+-----
+
