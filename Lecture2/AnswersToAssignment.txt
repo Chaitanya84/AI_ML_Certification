@@ -1,0 +1,7 @@
+Q: Explain eigenvalues and eigenvectors. Discuss the limitations in eigenvalue decomposition and
+define singular value decomposition.
+
+Answer:
+
+Eigne value : For a square matrix A, The eigen values are the the diagonal entries of a diagonal matrix D that daignolises matrix A.
+Let say we have a square Matrix A 
