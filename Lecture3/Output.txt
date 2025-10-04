@@ -1,0 +1,27 @@
+archive/netflix_titles.csv
+                              title                                            country
+0              Dick Johnson Is Dead                                      United States
+1                     Blood & Water                                       South Africa
+2                         Ganglands                                                NaN
+3             Jailbirds New Orleans                                                NaN
+4                      Kota Factory                                              India
+5                     Midnight Mass                                                NaN
+6  My Little Pony: A New Generation                                                NaN
+7                           Sankofa  United States, Ghana, Burkina Faso, United Kin...
+8     The Great British Baking Show                                     United Kingdom
+9                      The Starling                                      United States
+show_id            0
+type               0
+title              0
+director        2634
+cast             825
+country          831
+date_added        10
+release_year       0
+rating             4
+duration           3
+listed_in          0
+description        0
+dtype: int64
+831
+0
