@@ -53,6 +53,8 @@ print("Release years: ", release_years)
 print("Mean release year: ", np.mean(release_years))
 print("Max release year: ", np.max(release_years))
 print("Min release year: ", np.min(release_years)) 
-print("Standard deviation of release years: ", np.std(release_years)) 
+print("Standard deviation of release years: ", np.std(release_years))
+
+
 #print(recent_movies[['title', 'release_year']].head(10))    # You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using "Save & Run All" 
 # You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session
