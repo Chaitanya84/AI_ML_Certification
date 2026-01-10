@@ -155,3 +155,37 @@ plt.title("Linear Regression Fit using Gradient Descent")
 plt.legend()
 plt.show() 
 ```
+Calculating Cost Function
+- Step 1 Find all error
+- Square the error
+- Add all squared error
+- take average of all squared error
+- Devide by 2 the squared error
+
+![CostFunc](CostFunc.png)
+
+### J(w,b) is the <ins>Cost function</ins>
+
+> 
+> For Calculating cost function most easiest way is to assume b = 0
+
+Once for all <font color ="red"> w </font> if <font color ="red">cost function </font> is calculated then plot a graph between Value of the <font color ="red">cost function </font> against the value <font color ="red"> w </font> on whcih it was calcaulated.
+
+> <font color ="red"> w </font> on the x axis
+> <font color ="red">cost function </font> on the y axis
+
+![Minima](Minima.png)
+
+### The <font color ="red"> w </font> where <font color ="red">cost function </font> is minumum will be the <ins>best fit</ins> line.
+
+It will be highly uneconomical to calculate costFunction for all w values. e.g. If you have millions of data it becomes very slow and cumbersome to calcaulate for every w (assuming b is still 0 ). ANd when you take into account also the value of b it further complicates the calculation so what the solution for finding the minima
+
+The solution for this is Gradient Dissent aalgorithm
+
+What is this algorithm? 
+
+Consider you are on a mountain half way and you want to reach the peak. Considering the mountain is foggy and with 0 visibility, how do you find peak then? best way would be to take small steps in all possible direction and compare your altitude in the altimeter. This will give you answer wether you are gaining elevation or loosing it. and hence you can reach peak. This is what is applied on the graph above to find the minima and best fit w, and b
+
+![GradientDissent](GradientDissent.png)
+
+In the equation above alpha (α) is called he learning rate.
