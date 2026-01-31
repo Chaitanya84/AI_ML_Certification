@@ -1,4 +1,4 @@
-# Linear Regression
+# Linear Regression with single variable
 
 ![Graph_mg](Graph.png)
 
@@ -184,8 +184,20 @@ The solution for this is Gradient Dissent aalgorithm
 
 What is this algorithm? 
 
-Consider you are on a mountain half way and you want to reach the peak. Considering the mountain is foggy and with 0 visibility, how do you find peak then? best way would be to take small steps in all possible direction and compare your altitude in the altimeter. This will give you answer wether you are gaining elevation or loosing it. and hence you can reach peak. This is what is applied on the graph above to find the minima and best fit w, and b
+Consider you are on a mountain half way and you want to reach the peak. Considering the mountain is foggy and with 0 visibility, how do you find peak then? Best way would be to take small steps in all possible direction and compare your altitude in the altimeter. This will give you answer wether you are gaining elevation or loosing it. and hence you can reach peak. This is what is applied on the graph above to find the minima and best fit w, and b
 
 ![GradientDissent](GradientDissent.png)
 
 In the equation above alpha (α) is called he learning rate.
+> The value of alpha (α) will be (+)ve value between 0 and 1.
+
+- [ ] Read about Vectorisation and broadcasting algorithm
+- [ ] Read about convergence.
+
+
+Reference material 
+
+- Cousera Mathematics for ML
+- StandFord Basics of ML
+- Book Fundamentals of ML 
+
